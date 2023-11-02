@@ -1,0 +1,18 @@
+import matplotlib.pyplot as plt
+
+def plot_costs(Q, AFC, AVC, ATC):
+    plt.plot(Q, AFC, label="AFC")
+    plt.plot(Q, AVC, label="AVC")
+    plt.plot(Q, ATC, label="ATC")
+    plt.xlabel("Обсяг виробництва")
+    plt.ylabel("Вартість")
+    plt.legend()
+
+Q = np.arange(0, 10.1, 0.1)
+AFC = 10 / Q
+AVC = Q**2 - 8 * Q + 30
+ATC = Q**2 - 8 * Q + 40
+
+plot_costs(Q, AFC, AVC, ATC)
+
+plt.show()
